@@ -1,12 +1,12 @@
 export const loadTextContent = async (exerciseNumber: number): Promise<string> => {
   try {
-    const response = await fetch(`/src/data/exercise${exerciseNumber}.txt`);
+    const response = await fetch(`/data/exercise${exerciseNumber}.txt`);
     if (!response.ok) {
-      throw new Error(`Error loading exercise ${exerciseNumber} content`);
+      throw new Error('No se pudo cargar el contenido');
     }
     return await response.text();
   } catch (error) {
-    console.error('Error loading text content:', error);
-    return 'Error cargando la descripción del ejercicio.';
+    console.error('Error al cargar el contenido:', error);
+    return 'No se pudo cargar la descripción del ejercicio.';
   }
 };

@@ -1,12 +1,21 @@
-# Node.js
+# Dependencies
 node_modules/
-npm-debug.log
-yarn-debug.log
-yarn-error.log
-package-lock.json
-yarn.lock
-.npm/
-.yarn/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Production
+build/
+dist/
+
+# Misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # Python
 __pycache__/
@@ -15,19 +24,45 @@ __pycache__/
 *.so
 .Python
 env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
 venv/
 ENV/
-env.bak/
-venv.bak/
-.env
-.venv
-pip-log.txt
-pip-delete-this-directory.txt
 
-# Distribución / empaquetado
-dist/
-build/
-*.egg-info/
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local files
+*.log
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # Archivos de entorno
 .env
@@ -39,17 +74,6 @@ build/
 # Archivos del sistema
 .DS_Store
 Thumbs.db
-
-# IDEs y editores
-.idea/
-.vscode/
-*.swp
-*.swo
-.project
-.classpath
-.c9/
-*.launch
-.settings/
 
 # Archivos temporales
 *~

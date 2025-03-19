@@ -1,0 +1,20 @@
+En este ejercicio, trabajaremos con un problema de optimización lineal básico. El objetivo es minimizar la función de costo:
+
+z = x + 2y
+
+Sujeto a las siguientes restricciones:
+1. x ≥ 0
+2. y ≥ 0
+3. x ≤ 8
+4. x + y ≤ C
+
+Donde C es un valor que puedes ajustar usando el control deslizante.
+
+La región factible está definida por todas las combinaciones de x e y que satisfacen estas restricciones. El punto óptimo será aquel que minimice la función de costo z = x + 2y dentro de esta región.
+
+Para encontrar el punto óptimo:
+1. Ingresa valores para x e y
+2. Ajusta el valor de C si lo deseas
+3. Haz clic en "Calcular" para ver la región factible y el costo en ese punto
+
+El sistema te indicará si el punto que has ingresado está dentro o fuera de la región factible. 

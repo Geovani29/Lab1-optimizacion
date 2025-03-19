@@ -1,19 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-interface Exercise4Props {
-}
-
-const Exercise4: React.FC<Exercise4Props> = () => {
-  const [result, setResult] = useState<string | null>(null);
-  
+const Exercise4: React.FC = () => {
   return (
     <div className="exercise-container">
-      <h2>Ejercicio 4</h2>
-      {result && (
-        <div className="result-container">
-          <img src={result} alt="Resultado" />
-        </div>
-      )}
+      <h2>Ejercicio 4: En preparación</h2>
+      <p>Este ejercicio estará disponible próximamente.</p>
     </div>
   );
 };

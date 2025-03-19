@@ -1,19 +1,18 @@
-import React from 'react'
-import Exercise from './components/Exercise'
-import Sidebar from './components/Sidebar'
-import './App.css'
+import React, { useState } from 'react';
+import Exercise from './components/Exercise';
+import Sidebar from './components/Sidebar';
 
 const App: React.FC = () => {
-    const [selectedExercise, setSelectedExercise] = React.useState<number>(0)
+  const [selectedExercise, setSelectedExercise] = useState<number>(0);
 
-    return (
-        <div className="app-container">
-            <Sidebar setSelectedExercise={setSelectedExercise} />
-            <main className="main-content">
-                <Exercise selectedExercise={selectedExercise} />
-            </main>
-        </div>
-    )
-}
+  return (
+    <div className="app-container">
+      <Sidebar setSelectedExercise={setSelectedExercise} />
+      <main className="main-content">
+        <Exercise selectedExercise={selectedExercise} />
+      </main>
+    </div>
+  );
+};
 
-export default App
+export default App;
