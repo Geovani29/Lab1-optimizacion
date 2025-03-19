@@ -1,0 +1,51 @@
+Una empresa que fabrica mesas (𝑥) y sillas (𝑦) quiere minimizar sus costos de producción asegurándose de que su capacidad de producción no se exceda y optimizando el uso de sus recursos.
+
+Cada mesa cuesta 1 unidad monetaria y cada silla cuesta 2 unidades monetarias. La empresa quiere producir una cantidad de mesas y sillas de tal manera que minimice el costo total de producción sin violar las restricciones de capacidad de producción y almacenamiento.
+
+Para poder funcionar de manera eficiente, la empresa tiene las siguientes limitaciones:
+
+- Capacidad máxima de producción:
+
+La empresa no puede producir más de una cantidad máxima de productos, representada por 
+𝐶, por lo que:
+𝑥 + 𝑦 ≤ 𝐶
+Esto significa que la cantidad total de mesas y sillas no puede superar 𝐶
+
+- Límite de almacenamiento para mesas:
+
+Por cuestiones de espacio, no se pueden fabricar más de 8 mesas, es decir:
+𝑥 ≤ 8
+
+- No se pueden producir cantidades negativas:
+
+La empresa no puede fabricar una cantidad negativa de mesas o sillas, por lo que:
+𝑥 ≥ 0, 𝑦 ≥ 0
+
+- Minimización de costos:
+
+El costo total de producción se calcula como:
+𝑓(𝑥,𝑦) = 𝑥 + 2𝑦
+El objetivo es minimizar esta función dentro de la región factible.
+
+- ¿Por qué 𝐶 debe ser menor o igual a 10?
+Si la empresa quiere mantener bajos los costos y controlar la producción, entonces debe fijar un límite 𝐶 ≤ 10. Esto significa que la suma de mesas y sillas nunca puede superar 10 unidades, lo que impone restricciones más estrictas en la producción y ayuda a mantener costos bajos.
+
+Ejemplo con 𝐶 = 10
+
+Si la empresa produce 6 mesas y 4 sillas:
+6 + 4 = 10
+Costo total:
+6 + 2(4) = 14
+Cumple con las restricciones, pero si limitamos el costo máximo a 10, este valor sería inválido.
+
+- ¿Qué pasa si 𝐶 > 10?
+Si la empresa decide aumentar la capacidad de producción y permite que 𝐶 sea mayor a 10, entonces:
+
+La región factible se expande → Se pueden fabricar más mesas y sillas.
+El costo de producción puede aumentar significativamente → No hay un límite superior en los costos.
+Se tienen más combinaciones posibles → La empresa tiene más flexibilidad, pero puede ser menos eficiente.
+Ejemplo con 𝐶 = 15:
+Si la empresa produce 8 mesas y 7 sillas: 8 + 7 = 15
+Costo total:8 + 2(7) = 22
+El costo es mucho más alto que antes, pero ahora es válido porque 𝐶>10
+En este caso, el problema de optimización cambia, ya que ya no estamos restringidos a costos bajos, sino que podríamos buscar minimizar el costo dentro de una mayor cantidad de opciones.
