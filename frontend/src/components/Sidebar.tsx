@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/sidebar.css'
 
 interface SidebarProps {
     setSelectedExercise: (exercise: number) => void;
@@ -11,16 +12,28 @@ const Sidebar: React.FC<SidebarProps> = ({ setSelectedExercise }) => {
             <nav>
                 <ul>
                     <li>
-                        <button onClick={() => setSelectedExercise(1)}>Ejercicio 1</button>
+                        <button 
+                            onClick={() => setSelectedExercise(1)}
+                            className="exercise-button"
+                        >Problema de optimización</button>
                     </li>
                     <li>
-                        <button onClick={() => setSelectedExercise(2)}>Ejercicio 2</button>
+                        <button 
+                            onClick={() => setSelectedExercise(2)}
+                            className="exercise-button"
+                        >Matrices Sparses</button>
                     </li>
                     <li>
-                        <button onClick={() => setSelectedExercise(3)}>Ejercicio 3</button>
+                        <button 
+                            onClick={() => setSelectedExercise(3)}
+                            className="exercise-button"
+                        >Series de Taylor</button>
                     </li>
                     <li>
-                        <button onClick={() => setSelectedExercise(4)}>Ejercicio 4</button>
+                        <button 
+                            onClick={() => setSelectedExercise(4)}
+                            className="exercise-button"
+                        >Métodos de optimización</button>
                     </li>
                 </ul>
             </nav>

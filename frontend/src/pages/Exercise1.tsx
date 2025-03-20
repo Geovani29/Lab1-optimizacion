@@ -65,7 +65,7 @@ const Exercise1: React.FC = () => {
 
   return (
     <div className="exercise-container">
-      <h2>Ejercicio 1: Optimización Lineal Básica</h2>
+      <h2>Ejercicio 1: Problema de optimización de dos variables</h2>
       <InfoButton content={problemDescription} />
       <form onSubmit={handleSubmit}>
         <div className="input-group">

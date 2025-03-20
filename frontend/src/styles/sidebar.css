@@ -1,0 +1,51 @@
+/* Estilos para los botones del Sidebar */
+.exercise-button {
+    position: relative;
+    padding: 10px 20px;
+    background-color: #f8faff;
+    border: 2px solid #e0e7ff;
+    border-radius: 8px;
+    color: #284b8c;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.exercise-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.8),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.exercise-button:hover {
+    background-color: #e0e7ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(40, 75, 140, 0.1);
+}
+
+.exercise-button:hover::before {
+    animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
