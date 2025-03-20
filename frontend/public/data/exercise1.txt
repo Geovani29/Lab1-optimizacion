@@ -1,20 +1,75 @@
-En este ejercicio, trabajaremos con un problema de optimización lineal básico. El objetivo es minimizar la función de costo:
+ 📌 Descripción del Problema de Optimización
 
-z = x + 2y
+Una empresa dedicada a la fabricación de mesas (x) y sillas (y) busca minimizar sus costos de producción mientras opera dentro de su capacidad de producción y almacenamiento. Cada producto tiene un costo de fabricación definido:
 
-Sujeto a las siguientes restricciones:
-1. x ≥ 0
-2. y ≥ 0
-3. x ≤ 8
-4. x + y ≤ C
+- Cada mesa cuesta 1 unidad monetaria.
+- Cada silla cuesta 2 unidades monetarias.
 
-Donde C es un valor que puedes ajustar usando el control deslizante.
+El costo total de producción viene dado por la siguiente función:
 
-La región factible está definida por todas las combinaciones de x e y que satisfacen estas restricciones. El punto óptimo será aquel que minimice la función de costo z = x + 2y dentro de esta región.
+f(x, y) = x + 2y
 
-Para encontrar el punto óptimo:
-1. Ingresa valores para x e y
-2. Ajusta el valor de C si lo deseas
-3. Haz clic en "Calcular" para ver la región factible y el costo en ese punto
+Donde x representa la cantidad de mesas producidas y y la cantidad de sillas.
 
-El sistema te indicará si el punto que has ingresado está dentro o fuera de la región factible. 
+La empresa debe decidir cuántos productos fabricar para mantener los costos lo más bajos posible sin exceder sus restricciones de capacidad.
+
+---
+
+ 📌 Restricciones del Problema
+
+Para garantizar que la producción sea viable, la empresa tiene ciertas limitaciones:
+
+1. Límite en la cantidad total de productos fabricados:
+   x + y ≤ C  
+   Donde C es la cantidad máxima de mesas y sillas que se pueden fabricar en total.
+
+2. Capacidad máxima de almacenamiento de mesas:
+   x ≤ 8  
+   No se pueden fabricar más de 8 mesas, ya que ocupan más espacio en el almacén.
+
+3. No se pueden fabricar cantidades negativas: 
+   x ≥ 0,   y ≥ 0  
+   No tiene sentido fabricar un número negativo de mesas o sillas.
+
+---
+
+ 📌 ¿Por qué C ≤ 10 ayuda a minimizar costos?
+
+Si la empresa decide limitar la producción total a un máximo de 10 productos (C ≤ 10), esto le permite controlar el gasto en materia prima y fabricación.  
+
+- Al restringir la cantidad de mesas y sillas producidas, el costo total también queda limitado.
+- Esto significa que el valor de la función de costo nunca podrá superar 10 unidades monetarias si se eligen los valores de x y y correctamente.
+
+ ✅ Ejemplo con C = 10:
+- Si la empresa produce   6 mesas y 4 sillas, se cumple:  
+  6 + 4 = 10  (dentro de la restricción)
+- Su costo total será:  
+  f(6,4) = 6 + 2(4) = 14  
+  Si el costo debe ser menor a 10, entonces este valor no sería válido.
+
+---
+
+ 📌 ¿Qué pasa si C > 10?
+
+Si la empresa decide aumentar la capacidad de producción y permitir más de 10 productos (C > 10), la región factible se expande:
+
+- Ahora se pueden fabricar más mesas y sillas, lo que puede llevar a un mayor costo total.
+- La restricción x + y ≤ C se vuelve más flexible, permitiendo más combinaciones de producción.
+- Sin embargo, el costo total ya no está limitado a un valor máximo, lo que significa que la empresa puede terminar gastando más.
+
+ ✅ Ejemplo con C = 15:
+- Si la empresa produce 8 mesas y 7 sillas, se cumple:  
+  8 + 7 = 15  (válido con C = 15)
+- Pero el costo total será:  
+  f(8,7) = 8 + 2(7) = 22  
+  Esto significa que los gastos de producción aumentan significativamente.
+
+💡 Mientras más alto sea C, más alto puede ser el costo de producción.
+
+
+📌 Conclusión
+
+Si se limita la producción a C ≤ 10  , la empresa tiene un mejor control sobre sus costos y evita un gasto excesivo.  
+Si C > 10, se pueden fabricar más productos, pero el costo total puede aumentar significativamente y salirse del control de la empresa.
+
+📈 La decisión depende de si la empresa prefiere un costo controlado o más flexibilidad en la producción.🚀

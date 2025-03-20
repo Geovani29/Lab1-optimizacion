@@ -9,7 +9,10 @@ const App: React.FC = () => {
     <div className="app-container">
       <Sidebar setSelectedExercise={setSelectedExercise} />
       <main className="main-content">
-        <Exercise selectedExercise={selectedExercise} />
+        <Exercise 
+          selectedExercise={selectedExercise} 
+          setSelectedExercise={setSelectedExercise}
+        />
       </main>
     </div>
   );

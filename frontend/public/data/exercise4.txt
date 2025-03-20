@@ -1,0 +1,17 @@
+1. Gradiente Descendiente  
+   - Punto inicial (x0): Si está cerca del mínimo, se requieren pocas iteraciones; si está lejos, el método puede tardar más o quedar atrapado en óptimos locales.  
+   - Tasa de aprendizaje (alpha): Un alpha grande puede hacer que el método diverja, mientras que un alpha pequeño puede ralentizar la convergencia.  
+   - Tolerancia (tol): Valores más pequeños hacen que el método realice más iteraciones.  
+   - Tiempo de convergencia: Depende del alpha; si es adecuado, converge rápido, pero si es muy pequeño, se requieren muchas iteraciones.  
+
+2. Método de Newton  
+   - Punto inicial (x0): Si está cerca del mínimo, la convergencia es muy rápida (cuadrática), pero si está lejos o en un punto donde la segunda derivada es cero, el método puede fallar.  
+   - Segunda derivada (ddf): Si la curvatura es baja (ddf pequeño), los pasos pueden ser grandes y descontrolados.  
+   - Tolerancia (tol): Un tol más bajo aumenta las iteraciones necesarias.  
+   - Tiempo de convergencia: Generalmente rápido porque usa información de la segunda derivada, pero si la Hessiana es cercana a cero, puede ser inestable.  
+
+3. Sección Dorada  
+   - Punto inicial (a, b): Si el intervalo es grande, aumentan las iteraciones necesarias; si es muy pequeño, puede que el mínimo no esté dentro.  
+   - Intervalo inicial (a, b): Si es muy grande, aumentan las iteraciones necesarias.  
+   - Tolerancia (tol): Un tol más bajo requiere más iteraciones.  
+   - Tiempo de convergencia: Más lento que Newton y Gradiente Descendiente, pero siempre converge ya que no depende de derivadas.

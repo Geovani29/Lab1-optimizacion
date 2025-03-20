@@ -16,17 +16,35 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 2em;
-  line-height: 1.1;
-  margin-bottom: 1em;
-}
-
 h2 {
   font-size: 1.5em;
   line-height: 1.2;
   margin-bottom: 1em;
   color: #333;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: calc(100vh - 80px);
+  padding: 20px;
+}
+
+.title h2 {
+  font-size: 2.5em;
+  line-height: 1.2;
+  margin-bottom: 1em;
+  color: #284b8c;
+}
+
+.title p {
+  font-size: 1.2em;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .sidebar {
@@ -297,4 +315,146 @@ h2 {
   line-height: 1.6;
   margin-bottom: 1rem;
   white-space: pre-line;
+}
+
+/* Exercise4 specific styles */
+.method-selection {
+  margin: 20px 0;
+}
+
+.method-selection select {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 2px solid #e0e7ff;
+  border-radius: 8px;
+  margin-top: 10px;
+  background-color: #f8faff;
+  transition: all 0.2s ease;
+}
+
+.method-selection select:focus {
+  outline: none;
+  border-color: #284b8c;
+  box-shadow: 0 0 0 3px rgba(40, 75, 140, 0.1);
+}
+
+.parameters-section {
+  background-color: #f8faff;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  border: 2px solid #e0e7ff;
+}
+
+.parameter-group {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 20px 0;
+}
+
+/* Cuando hay 3 elementos, que ocupen todo el espacio */
+.parameter-group:has(div:nth-child(3):last-child) {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.parameter-group div {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+}
+
+.parameter-group label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #284b8c;
+  height: 60px;
+  display: flex;
+  align-items: flex-start;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.parameter-group input {
+  padding: 12px 15px;
+  border: 2px solid #e0e7ff;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f8faff;
+  transition: all 0.2s ease;
+  width: 100%;
+  height: 45px;
+  margin-top: auto;
+}
+
+.parameter-group input:focus {
+  outline: none;
+  border-color: #284b8c;
+  box-shadow: 0 0 0 3px rgba(40, 75, 140, 0.1);
+}
+
+/* Estilo para el botón de calcular en Exercise4 */
+.parameters-section button {
+  background-color: #284b8c;
+  color: white;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+  box-sizing: border-box;
+}
+
+.parameters-section button:hover {
+  background-color: #1a3a7a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(40, 75, 140, 0.2);
+}
+
+.parameters-section button:active {
+  transform: translateY(0);
+}
+
+.parameters-section button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.results-section {
+  margin-top: 30px;
+}
+
+.result-info {
+  background-color: #e8f5e9;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border: 1px solid #4caf50;
+}
+
+.result-info p {
+  margin: 0;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.graph-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.graph-container img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #e0e7ff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(40, 75, 140, 0.1);
 }

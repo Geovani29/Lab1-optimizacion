@@ -7,12 +7,9 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ setSelectedExercise }) => {
     return (
         <aside className="sidebar">
-            <h1>Optimización</h1>
+            <h1 style={{ cursor: 'pointer' }} onClick={() => setSelectedExercise(0)}>Optimización</h1>
             <nav>
                 <ul>
-                    <li>
-                        <a href="#instrucciones">Instrucciones</a>
-                    </li>
                     <li>
                         <button onClick={() => setSelectedExercise(1)}>Ejercicio 1</button>
                     </li>

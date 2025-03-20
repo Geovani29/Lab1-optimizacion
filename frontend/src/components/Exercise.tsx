@@ -6,9 +6,10 @@ import Exercise4 from '../pages/Exercise4';
 
 interface ExerciseProps {
   selectedExercise: number;
+  setSelectedExercise: (exercise: number) => void;
 }
 
-const Exercise: React.FC<ExerciseProps> = ({ selectedExercise }: ExerciseProps) => {
+const Exercise: React.FC<ExerciseProps> = ({ selectedExercise, setSelectedExercise }: ExerciseProps) => {
   switch (selectedExercise) {
     case 1:
       return <Exercise1 />;
@@ -20,7 +21,7 @@ const Exercise: React.FC<ExerciseProps> = ({ selectedExercise }: ExerciseProps) 
       return <Exercise4 />;
     default:
       return (
-        <div>
+        <div className='title'>
           <h2>Bienvenido al Laboratorio de Optimización</h2>
           <p>Selecciona un ejercicio del menú para comenzar.</p>
         </div>
